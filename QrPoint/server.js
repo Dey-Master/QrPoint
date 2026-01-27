@@ -80,6 +80,6 @@ server.get('/views/pages_adm/adm-perfil', adminAuth, (req, res) => {
     res.sendFile(path.join(__dirname, '/views/pages_adm/adm-perfil.html'));
 });
 
-server.listen(PORT, '192.168.1.42', () => {
+server.listen(PORT, /*'192.168.1.1',*/ () => {
     console.log(`Server rodando na Port ${PORT}`);
 })
