@@ -47,7 +47,6 @@ CREATE TABLE `qrcodes` (
 
 LOCK TABLES `qrcodes` WRITE;
 /*!40000 ALTER TABLE `qrcodes` DISABLE KEYS */;
-INSERT INTO `qrcodes` VALUES (31,'666f3523-dd7e-4753-a699-ef645eb1a751','2026-01-20','00:18:00','01:18:00','/uploads/qr_666f3523-dd7e-4753-a699-ef645eb1a751.png',1,'expirado','manha','2026-01-19 23:17:28','2026-01-20 11:27:00'),(32,'9cab334f-dfd7-4310-8394-1214a7241a33','2026-01-20','12:50:00','12:55:00','/uploads/qr_9cab334f-dfd7-4310-8394-1214a7241a33.png',1,'expirado','tarde','2026-01-20 11:49:53','2026-01-20 11:55:00'),(35,'6929ea2b-9617-454f-a0b9-78994bb0416b','2026-01-27','12:00:00','16:00:00','/uploads/qr_6929ea2b-9617-454f-a0b9-78994bb0416b.png',1,'pendente','tarde','2026-01-27 09:34:31','2026-01-27 09:34:31');
 /*!40000 ALTER TABLE `qrcodes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
