@@ -1,0 +1,89 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    transition: .3s;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+    padding: 10px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0px 0px 0px 280px;
+}
+
+.desc {
+    width: 100%;
+    padding: 10px;
+}
+.desc h2 {
+    font-size: 30px;
+}
+
+.desc span {
+    font-size: 17px;
+    color: #848485;
+}
+
+.box {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.primeiro-box {
+    border: 1px solid #E5E7EB;
+    height: 110px;
+    width: 250px;
+    padding: 10px;
+    display: flex;
+    border-radius: 6px;
+    background-color: white;
+}
+.direita span {
+    font-size: 18px;
+    color: #848485;
+}
+.direita p {
+    margin-top: 12px;
+    font-size: 30px;
+}
+
+.direita {
+    overflow: hidden;
+    width: 80%;
+}
+.esquerda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+.esquerda .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    padding: 1px;
+    height: 42px;
+    width: 42px;
+    background-color: #f4f4f4;
+    margin-top: 10px;
+}
+
+.icon .bi-people {
+    color: #000;
+}
+
+#totalUsuarios {
+    font-size: 20px;
+}

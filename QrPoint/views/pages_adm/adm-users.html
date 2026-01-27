@@ -1,0 +1,372 @@
+<script src="../../public/js/carregamento.js"></script>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>QrPoint</title>
+    <link rel="stylesheet" href="../../public/style/admUsers.css">
+    <link rel="stylesheet" href="../../public/style/menu.css">
+    <link rel="stylesheet" href="../../public/style/carregamento.css">
+</head>
+<link rel="icon" type="image/png" style="font-size: 256px;" sizes="1024x1024" href="../../public/assets/logo.png">
+<body>
+
+    <div id="loading" class="hideLoading">
+        <div class="loading-container">
+            <svg fill="hsl(228, 97%, 42%)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="spinner-svg"><circle cx="4" cy="12" r="0"><animate begin="0;spinner_z0Or.end" attributeName="r" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="0;3" fill="freeze"/><animate begin="spinner_OLMs.end" attributeName="cx" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="4;12" fill="freeze"/><animate begin="spinner_UHR2.end" attributeName="cx" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="12;20" fill="freeze"/><animate id="spinner_lo66" begin="spinner_Aguh.end" attributeName="r" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="3;0" fill="freeze"/><animate id="spinner_z0Or" begin="spinner_lo66.end" attributeName="cx" dur="0.001s" values="20;4" fill="freeze"/></circle><circle cx="4" cy="12" r="3"><animate begin="0;spinner_z0Or.end" attributeName="cx" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="4;12" fill="freeze"/><animate begin="spinner_OLMs.end" attributeName="cx" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="12;20" fill="freeze"/><animate id="spinner_JsnR" begin="spinner_UHR2.end" attributeName="r" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="3;0" fill="freeze"/><animate id="spinner_Aguh" begin="spinner_JsnR.end" attributeName="cx" dur="0.001s" values="20;4" fill="freeze"/><animate begin="spinner_Aguh.end" attributeName="r" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="0;3" fill="freeze"/></circle><circle cx="12" cy="12" r="3"><animate begin="0;spinner_z0Or.end" attributeName="cx" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="12;20" fill="freeze"/><animate id="spinner_hSjk" begin="spinner_OLMs.end" attributeName="r" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="3;0" fill="freeze"/><animate id="spinner_UHR2" begin="spinner_hSjk.end" attributeName="cx" dur="0.001s" values="20;4" fill="freeze"/><animate begin="spinner_UHR2.end" attributeName="r" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="0;3" fill="freeze"/><animate begin="spinner_Aguh.end" attributeName="cx" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="4;12" fill="freeze"/></circle><circle cx="20" cy="12" r="3"><animate id="spinner_4v5M" begin="0;spinner_z0Or.end" attributeName="r" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="3;0" fill="freeze"/><animate id="spinner_OLMs" begin="spinner_4v5M.end" attributeName="cx" dur="0.001s" values="20;4" fill="freeze"/><animate begin="spinner_OLMs.end" attributeName="r" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="0;3" fill="freeze"/><animate begin="spinner_UHR2.end" attributeName="cx" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="4;12" fill="freeze"/><animate begin="spinner_Aguh.end" attributeName="cx" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="12;20" fill="freeze"/></circle></svg>
+            <p class="loading-text">Carregando...</p>
+        </div>
+    </div>
+
+    <div id="carregando" class="hide">
+        <span class="carregando"></span>
+    </div>
+
+    <section id="barra-lateral">
+        <header>
+            <div class="logo">
+                <img src="../../public/assets/logo.png" height="64px" width="64px">
+            </div>
+            <h2>QrPoint</h2>
+        </header>
+
+        <nav id="abas">
+            <ul>
+               <a id="dashboard">
+                    <li class="item-menu">
+                        <i class="bi bi-columns-gap"></i>
+                        <span>Dashboard</span>
+                    </li>
+                </a>
+                  <a id="qrcodes">
+                    <li class="item-menu">
+                        <i class="bi bi-qr-code-scan"></i>
+                        <span>Gerar QrCodes</span>
+                    </li>
+                </a>
+                  <a id="usuarios">
+                    <li class="item-menu ativo">
+                        <i class="bi bi-people item-menu ativo"></i>
+                        <span class="item-menu ativo">Usuarios</span>
+                    </li>
+                </a>
+                  <a id="presencas">
+                    <li class="item-menu">
+                        <i class="bi bi-calendar2-week"></i>
+                        <span>Presenças</span>
+                    </li>
+                </a>
+                <a id="perfil">
+                    <li class="item-menu">
+                        <i class="bi bi-person"></i>
+                        <span>Perfil</span>
+                    </li>
+                </a>
+            </ul>
+        </nav>
+
+        <footer id="footer">
+            <div class="sessao">
+                <div class="letra-sessao"></div>
+                <div class="user-sessao">
+                    <h4></h4>
+                    <span class="email-sessao"></span>
+                </div>
+            </div>
+
+            <div class="icon-sair">
+                <p id="open-modal" ><i class="bi bi-box-arrow-right"></i></p>
+                <h4>Sair da conta</h4>
+            </div>
+            <div id="fade" class="hide"></div>
+            <div id="modal" class="hide">
+                <h1 id="m-h1">Desejas terminar a sessão?</h1>
+
+                <div class="modal-body">
+                    <button class="sair">Sair</button>
+                    <button id="close-modal"">Cancelar</button>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <main id="container">
+        <div class="desc">
+            <h2>Gestão de Usuários</h2>
+            <span>Cadastre, edite e gerencie os usuarios do sistema</span>
+        </div>
+
+        <div class="create-modal" id="open-modalCreate">
+            <p>Criar Usuario</p>
+        </div>
+
+        <div id="fade-create" class="hideC"></div>
+
+        <div id="modal-create" class="hideC">
+            <div class="modal-bodyCreate">
+                <h2 id="create-h1">Criar Usuario</h2>
+                <form class="form-create">
+
+                    <label for="nome">
+                        <i class="bi bi-person-fill"></i>
+                        <input name="nome" id="nomeUser" type="text" placeholder="Insira o Nome" />
+                    </label>
+                    
+
+                    <label for="sobrenome">
+                        <i class="bi bi-person-fill"></i>
+                        <input name="sobrenome" id="sobrenomeUser" type="text" placeholder="Insira o Sobrenome" />
+                    </label>
+                    
+
+                    <label for="email">
+                        <i class="bi bi-envelope"></i>
+                        <input name="email" id="emailUser" type="email" placeholder="Insira o Email" />
+                    </label>
+                    
+
+                    <label for="senha">
+                        <i class="bi bi-lock-fill"></i>
+                        <div class="div">
+                            <input name="senha" type="password" id="senhaV" placeholder="Insira a senha" />
+                            <i class="bi bi-eye-fill" id="btn-senhaV" onclick="mostrarSenhaV()"></i>
+                        </div>
+                    </label>
+                    
+
+                    <label for="ConfirmarSenha" class="ConfirmarSenha">
+                        <i class="bi bi-lock-fill"></i>
+                        <div>
+                            <input name="senha" type="password" id="senhaF" placeholder="Confirme a senha" />
+                            <i class="bi bi-eye-fill" id="btn-senhaF" onclick="mostrarSenhaF()"></i>
+                        </div>
+                    </label>
+                    
+                    <label for="tipo" style="margin-top: -20px;">
+                        <select id="tipoUser" name="tipo">
+                            <option value="">Selecione o cargo:</option>
+                            <option value="user">Usuario</option>
+                            <option value="moderador">Moderador</option>
+                        </select>
+                    </label>
+
+                    <label for="turno">
+                        <select id="turnoUser" name="turno">
+                            <option value="">Selecione o turno:</option>
+                            <option value="manha"><i class="bi bi-alarm"></i>Manhã</option>
+                            <option value="tarde"><i class="bi bi-alarm"></i>Tarde</option>
+                        </select>
+                    </label>
+
+                    <label for="status">
+                        <select id="statusUser" name="status">
+                            <option value="">Selecione o status:</option>
+                            <option value="aprovado"><i class="bi bi-alarm"></i>Aprovado</option>
+                            <option value="pendente"><i class="bi bi-alarm"></i>Pendente</option>
+                        </select>
+                    </label>
+                    
+                    <div class="actions-create">
+                        <button id="close-create" type="button">Cancelar</button>
+                        <button id="create" type="submit">Criar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <nav class="box">
+            <div class="primeiro-box">
+                <div class="direita">
+                    <span>Todos os Usuarios</span>
+                    <p id="totalUsuarios"></p>
+                </div>
+                <div class="esquerda">
+                    <div class="icon"><i class="bi bi-people"></i></div>
+                </div>
+            </div>
+
+            <div class="primeiro-box">
+                <div class="direita">
+                    <span>Usuarios comuns</span>
+                    <p id="usuariosUser"></p>
+                </div>
+                <div class="esquerda">
+                    <div class="icon colorUser"><i class="bi bi-people"></i></div>
+                </div>
+            </div>
+
+            <div class="primeiro-box">
+                <div class="direita">
+                    <span>Moderadores</span>
+                    <p id="usuariosModeradores"></p>
+                </div>
+                <div class="esquerda">
+                    <div class="icon colorModerador"><i class="bi bi-people"></i></div>
+                </div>
+            </div> 
+
+            <div class="primeiro-box">
+                <div class="direita">
+                    <span>Administradores</span>
+                    <p id="usuariosAdmin"></p>
+                </div>
+                <div class="esquerda">
+                    <div class="icon colorAdmin"><i class="bi bi-people"></i></div>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="filt">
+            <nav class="filtro">
+                <div class="texto">
+                    <h3>Filtros</h3>
+                    <span>Filtre os usuarios por turno, status e tipo</span>
+                </div>
+
+                <form class="form" id="form-filtro">
+                    <label for="turno"><b>Turno</b>
+                            <select id="turnoFiltro" name="turno">
+                                <option value="">Todos</option>
+                                <option value="manha">Manhã</option>
+                                <option value="tarde">Tarde</option>
+                            </select>
+                        </label>
+
+                        <label for="status"><b>Status</b>
+                            <select id="statusFiltro" name="status">
+                                <option value=""></i>Todos</option>
+                                <option value="aprovado">Aprovados</option>
+                                <option value="pendente">Pendentes</option>
+                                <option value="bloqueado">Bloqueados</option>
+                            </select>
+                        </label>
+
+                        <label for="tipo"><b>Tipo</b>
+                            <select id="tipoFiltro" name="tipo">
+                                <option value="">Todos</option>
+                                <option value="admin">Admin</option>
+                                <option value="user">Usuarios</option>
+                                <option value="moderador">Moderadores</option>
+                            </select>
+                        </label>
+
+                        <label for="search"><b>Buscar</b>
+                            <i class="bi bi-search"></i>
+                            <input type="text" id="search" placeholder="Buscar Usuario">
+                        </label>
+                </form>
+            </nav>
+        </nav>
+
+        <div class="container-table">
+            <!-- <div id="carregar">
+                <span class="carregar"></span>
+                <p class="p">carregando...</p>
+            </div> -->
+
+            <table id="tabela-usuarios" class="tabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Turno</th>
+                        <th>Cargo</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+    <div class="delete-modal">
+        <p id="open-modalDelete"></p>
+    </div>
+    
+    <div id="fade-delete" class="hides"></div>
+        <div id="modal-delete" class="hides">
+            <h1 id="delete-h1">Tens certeza que desejas excluir esse usuario?</h1>
+
+            <div class="modal-body">
+                <button class="delete">Excluir</button>
+                <button id="close-delete">Cancelar</button>
+            </div>
+        </div>
+
+
+
+        <div class="edit-modal">
+            <p id="open-modalEdit"></p>
+        </div>
+
+        <div id="fade-edit" class="hideE"></div>
+
+        <div id="modal-edit" class="hideE">
+            <div class="modal-bodyEdit">
+                <h2 id="edit-h1">Editar Usuario</h2>
+
+                <form class="form-edit" id="form-editar">
+
+                    <label>
+                        <i class="bi bi-person-fill"></i>
+                        <input type="text" id="nome" placeholder="Insira o novo nome">
+                    </label>
+
+                    <label>
+                        <i class="bi bi-person-fill"></i>
+                        <input type="text" id="sobrenome" placeholder="Insira o novo sobrenome">
+                    </label>
+
+                    <label>
+                        <i class="bi bi-envelope"></i>
+                        <input type="email" id="email" placeholder="Insira o novo email">
+                    </label>
+
+                    <label for="turno">
+                        <select id="turno" name="turno">
+                            <option value="">Selecione o turno:</option>
+                            <option value="manha">Manhã</option>
+                            <option value="tarde">Tarde</option>
+                        </select>
+                    </label>
+
+                    <label for="tipo">
+                        <select id="tipo" name="tipo">
+                            <option value="">Selecione o cargo:</option>
+                            <option disabled value="admin">Administrador</option>
+                            <option value="user">Usuario</option>
+                            <option value="moderador">Moderador</option>
+                        </select>
+                    </label>
+
+                    <label for="status">
+                        <select id="status" name="status">
+                            <option value="">Selecione o status:</option>
+                            <option value="aprovado">Aprovado</option>
+                            <option value="pendente">Pendente</option>
+                            <option value="bloqueado">Bloqueado</option>
+                        </select>
+                    </label>
+
+                    <div class="actions">
+                        <button id="close-edit" type="button">Cancelar</button>
+                        <button id="edit" type="submit">Atualizar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="box-mensagem"></div>
+    
+    <script src="../../public/js/menu.js"></script>
+    <script src="../../public/js/admLocation.js"></script>
+    <script src="../../public/js/logout.js"></script>
+    <script src="../../public/js/animacao.js"></script>
+    <script src="../../public/js/admUsers.js"></script>
+</body>
+</html>

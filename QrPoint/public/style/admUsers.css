@@ -1,0 +1,763 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    transition: .3s;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+}
+
+/* #carregando {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 775px;
+    top: 530px;
+    gap: 3px;
+}
+#carregando.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+span.carregar {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #848485;
+    border-left: 2px solid transparent;
+    border-radius: 50%;
+    animation: lodiang 1s linear infinite;
+    transition: .2s;
+}
+.p {
+    color: #848485;
+    font-size: bold;
+    border: none;
+} */
+
+#container {
+    height: 100%;
+    width: 100%;
+    padding: 10px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0px 0px 0px 280px;
+}
+
+.desc {
+    width: 100%;
+    padding: 10px;
+}
+.desc h2 {
+    font-size: 30px;
+}
+
+.desc span {
+    font-size: 17px;
+    color: #848485;
+}
+
+.box {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.primeiro-box {
+    border: 1px solid #E5E7EB;
+    height: 110px;
+    width: 250px;
+    padding: 10px;
+    display: flex;
+    border-radius: 6px;
+    background-color: white;
+}
+.direita span {
+    font-size: 18px;
+    color: #848485;
+}
+.direita p {
+    margin-top: 12px;
+    font-size: 30px;
+}
+
+.direita {
+    overflow: hidden;
+    width: 80%;
+}
+.esquerda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+.esquerda .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    padding: 1px;
+    height: 42px;
+    width: 42px;
+    background-color: #f4f4f4;
+    margin-top: 10px;
+}
+.icon.colorUser {
+    background-color: #f1f3f5;
+    color: #495057; 
+
+}
+.icon.colorAdmin {
+    background-color: #e7f1ff;
+    color: #0d6efd;
+}
+.icon.colorModerador {
+    background: #ede9fe;
+    color: #5b21b6; 
+
+}
+
+.filt{
+    padding: 10px;
+}
+.filtro {
+    width: 100%;
+    padding: 10px 10px 12px 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    background-color: white;
+    border: 1px solid #E5E7EB;
+}
+.texto h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.texto span{
+    font-size: 16px;
+    color: #848485;
+}
+
+.form {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+.form select {
+    height: 35px;
+    font-size: 15px;
+    width: 230px;
+    border: 1px solid #ccc;
+    padding: 0px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form input {
+    height: 35px;
+    font-size: 17px;
+    width: 230px;
+    border: 1px solid #ccc;
+    padding: 0px 40px;
+    border-radius: 5px;
+    outline: none;
+}
+.form input:focus {
+    border-color: #6366F1;
+    box-shadow: 0 0 5px #6366F1;
+    outline: none;
+}
+.form select:focus {
+    border-color: #6366F1;
+    box-shadow: 0 0 5px #6366F1;
+    outline: none;
+}
+.form label .bi-search{
+    font-size: 20px;
+    position: absolute;
+    left: 81.5%;
+    top: 400px;
+}
+
+.container-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+}
+.tabela {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #a8acb1;
+}
+.tabela th, .tabela td {
+    border-bottom: 1px solid #E5E7EB;
+    padding: 10px;
+    text-align: left;
+}
+.tabela th {
+    background: #f5f5f5;
+    padding: 12px;
+    font-weight: bold;
+}
+
+.tabela tbody tr td {
+    padding: 10px 12px;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+}
+.tabela tbody tr:last-child td {
+    border-bottom: none;
+}
+
+td button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 6px;
+}
+
+td .btn-delete { 
+    color: red; 
+}
+td .btn-edit { 
+    color: #000;
+}
+
+td button:hover {
+    opacity: 0.7;
+}
+.status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.status.pendente {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status.aprovado {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status.bloqueado {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.users {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 12px;
+}
+.users.admin {
+    background: #e7f1ff;
+    color: #0d6efd;
+}
+.users.moderador {
+    background: #ede9fe;
+    color: #5b21b6; 
+}
+.users.user {
+    background: #f1f3f5;
+    color: #495057; 
+}
+.turno {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 12px;
+}
+.turno.manha {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.turno.tarde {
+    background: #ffe5d0;
+    color: #b45309;
+}
+
+
+.delete-modal {
+    display: flex;
+    position: relative;
+    left: 15px;
+}
+
+#open-modalDelete {
+    cursor: pointer;
+    font-size: 20px;
+    transition: .2s;
+}
+#open-modalDelete:hover {
+    color: white;
+}
+
+#fade-delete, #modal-delete {
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+#fade-delete {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 55;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#modal-delete{
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    z-index: 60;
+    border-radius: 6px;
+    padding: 20px;
+    height: auto;
+    width: auto;
+    transform: translate(-50%, -50%);
+    background-color: #f4f4f4;
+    border: 1px solid rgb(221, 213, 213);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#modal-delete.hides,
+#fade-delete.hides {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal-delete.hides{
+    top: 0;
+}
+#delete-h1 {
+    font-size: 20px;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    gap: 25px;
+}
+.modal-body button {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+.delete {
+    background-color: #EF4444;
+    transition: 0.5s;
+    
+}
+.delete:hover {
+    opacity: 1;
+    background-color: #f08484;
+}
+
+
+#close-delete {
+    background-color: #a8acb1;
+    transition: 0.5s;
+    color: white;
+    font-size: 16px;
+}
+#close-delete:hover {
+    opacity: 1;
+    background-color:  #d6d6d6;
+}
+
+
+#fade-edit {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 50;
+    transition: .4s;
+}
+
+#modal-edit {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    padding: 25px 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    z-index: 60;
+    transition: .4s;
+}
+
+#fade-edit.hideE,
+#modal-edit.hideE {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-bodyEdit {
+    display: flex;
+    flex-direction: column;
+}
+
+#edit-h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #6366F1;
+}
+
+.form-edit {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-edit label {
+    position: relative;
+    width: 90%;
+}
+
+.form-edit input {
+    width: 340px;
+    height: 40px;
+    padding: 0px 40px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: transparent;
+}
+
+.form-edit input:focus {
+    border-color: #6366F1;
+    box-shadow: 0 0 6px rgba(99,102,241,.5);
+    outline: none;
+}
+.form-edit select {
+    width: 340px;
+    height: 40px;
+    padding: 0px 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.form-edit select:focus {
+    border-color: #6366F1;
+    box-shadow: 0 0 5px #6366F1;
+    outline: none;
+}
+.form-edit label {
+    position: relative;
+}
+.form-edit label .bi-envelope{
+    font-size: 20px;
+    position: absolute;
+    left: 4%;
+    top: 10px;
+    color: #7f8c8d;
+}
+.form-edit label .bi-lock-fill{
+    font-size: 20px;
+    position: absolute;
+    left: 4%;
+    top: 10px;
+    color: #7f8c8d;
+}
+.form-edit label .bi-person-fill{
+    font-size: 20px;
+    position: absolute;
+    left: 4%;
+    top: 10px;
+    color: #7f8c8d;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+#edit,
+#close-edit {
+    flex: 1;
+    height: 35px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#edit {
+    background: #6366F1;
+    color: #fff;
+}
+
+#edit:hover {
+    background: transparent;
+    border: 1px solid #6366F1;
+    color: #6366F1;
+}
+
+#close-edit {
+    background: #a8acb1;
+    color: #fff;
+}
+
+#close-edit:hover {
+    background: #d6d6d6;
+    color: #333;
+}
+
+#open-modalEdit {
+    cursor: pointer;
+    font-size: 16px;
+    color: #6366F1;
+    transition: .2s;
+}
+
+#open-modalEdit:hover {
+    opacity: .8;
+}
+
+
+.create-modal p{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #6366F1;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: 0.3s;
+    cursor: pointer;
+    color: white;
+}
+
+.create-modal p:hover {
+    background: transparent;
+    border: 1px solid #6366F1;
+    color: #6366F1;
+}
+
+#fade-create {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 50;
+    transition: .4s;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+#modal-create {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    height: auto;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    z-index: 60;
+    transition: .4s;
+}
+
+#fade-create.hideC,
+#modal-create.hideC {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal-create .modal-bodyCreate {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#create-h1 {
+    width: 90%;
+    text-align: center;
+    font-size: 28px;
+    color: #6366F1;
+}
+
+.form-create {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-create label {
+    position: relative;
+    width: 92%;
+}
+
+.form-create input {
+    width: 340px;
+    height: 40px;
+    padding: 0px 40px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+}
+
+.form-create input:focus {
+    border-color: #6366F1;
+    box-shadow: 0 0 6px rgba(99,102,241,.5);
+    outline: none;
+}
+.form-create select {
+    width: 340px;
+    height: 40px;
+    padding: 0px 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    outline: none;
+}
+
+.form-create select:focus {
+    border-color: #6366F1;
+    box-shadow: 0 0 5px #6366F1;
+    outline: none;
+}
+.form-create label {
+    position: relative;
+}
+.form-create label .bi-envelope{
+    font-size: 20px;
+    position: absolute;
+    left: 4%;
+    top: 10px;
+    color: #7f8c8d;
+}
+.form-create label .bi-lock-fill{
+    font-size: 20px;
+    position: absolute;
+    left: 4%;
+    top: 10px;
+    color: #7f8c8d;
+}
+.form-create label .bi-person-fill{
+    font-size: 20px;
+    position: absolute;
+    left: 4%;
+    top: 10px;
+    color: #7f8c8d;
+}      
+div .bi-eye-fill{
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+    left: 96%;
+    bottom: 30px;
+    color: #6366F1;
+}
+div .bi-eye-slash-fill {
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+    left: 96%;
+    bottom: 30px;
+    color: #6366F1;
+}
+.form-create label.ConfirmarSenha {
+    margin-top: -24px;
+}
+
+.actions-create {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#create,
+#close-create {
+    flex: 1;
+    height: 35px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#create {
+    background: #6366F1;
+    color: #fff;
+}
+
+#create:hover {
+    background: transparent;
+    border: 1px solid #6366F1;
+    color: #6366F1;
+}
+
+#close-create {
+    background: #a8acb1;
+    color: #fff;
+}
+
+#close-create:hover {
+    background: #d6d6d6;
+    color: #333;
+}
+
+#open-modalCreate {
+    cursor: pointer;
+    font-size: 16px;
+    color: #6366F1;
+    transition: .2s;
+}
+
+#open-modalCreate:hover {
+    opacity: .8;
+}

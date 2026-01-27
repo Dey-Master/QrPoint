@@ -1,0 +1,334 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    transition: .3s;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+    padding: 10px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0px 0px 0px 280px;
+}
+
+.desc {
+    width: 100%;
+    padding: 10px;
+}
+.desc h2 {
+    font-size: 30px;
+}
+
+.desc span {
+    font-size: 17px;
+    color: #848485;
+}
+
+.box{
+    padding: 10px;
+}
+.boxChild {
+    width: 80%;
+    padding: 10px 10px 12px 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    background-color: white;
+    border: 1px solid #E5E7EB;
+}
+.perfil {
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    background-color: white;
+    padding: 10px;
+    gap: 10px;
+    width: 100%;
+    border-radius: 6px;
+}
+.letra-perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 1px;
+    height: 68px;
+    width: 68px;
+    /* background-color: #0d6efd;
+    color: white; */
+    font-size: 25px;
+}
+.letra-perfil.moderador{
+    background: #ede9fe;
+    color: #5b21b6;
+}
+.letra-perfil.admin {
+    background: #e7f1ff;
+    color: #0d6efd;
+}
+
+.email-perfil {
+    width: 160px;         
+    white-space: nowrap;   
+    overflow: hidden;   
+    text-overflow: ellipsis;
+}
+
+.user-perfil {
+    width: 500px;         
+    white-space: nowrap;   
+    overflow: hidden;   
+    text-overflow: ellipsis;
+}
+
+.btn-edit-perfil {
+    border: none;
+    background-color: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    position: relative;
+    top: 0;
+    left: 170px;
+}
+
+.detalhe {
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 1px solid #E5E7EB;
+}
+
+.status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.status.pendente {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status.aprovado {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status.bloqueado {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.users {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 12px;
+}
+.users.admin {
+    background: #e7f1ff;
+    color: #0d6efd;
+}
+.users.moderador {
+    background: #ede9fe;
+    color: #5b21b6;
+}
+.turno {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 12px;
+}
+.turno.manha {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.turno.tarde {
+    background: #ffe5d0;
+    color: #b45309;
+}
+
+
+#fade-edit {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 50;
+    transition: .4s;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+#modal-edit {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    height: auto;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    z-index: 60;
+    transition: .4s;
+}
+
+#fade-edit.hideE,
+#modal-edit.hideE {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal-edit .modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#edit-h1 {
+    width: 90%;
+    text-align: center;
+    font-size: 28px;
+    color: #6366F1;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form label {
+    position: relative;
+    width: 92%;
+}
+
+.form input {
+    width: 300px;
+    height: 40px;
+    padding: 0px 40px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+}
+
+.form input:focus {
+    border-color: #6366F1;
+    box-shadow: 0 0 6px rgba(99,102,241,.5);
+    outline: none;
+}
+label {
+    position: relative;
+}
+label.ConfirmarSenha {
+    margin-top: -24px;
+}
+label .bi-envelope{
+    font-size: 20px;
+    position: absolute;
+    left: 4%;
+    top: 10px;
+    color: #7f8c8d;
+}
+label .bi-lock-fill{
+    font-size: 20px;
+    position: absolute;
+    left: 4%;
+    top: 10px;
+    color: #7f8c8d;
+}
+label .bi-person-fill{
+    font-size: 20px;
+    position: absolute;
+    left: 4%;
+    top: 10px;
+    color: #7f8c8d;
+}
+
+div .bi-eye-fill{
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+    left: 98%;
+    bottom: 30px;
+    color: #6366F1;
+}
+div .bi-eye-slash-fill {
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+    left: 98%;
+    bottom: 30px;
+    color: #6366F1;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    margin-top: -10px;
+}
+
+#edit,
+#close-edit {
+    flex: 1;
+    height: 35px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#edit {
+    background: #6366F1;
+    color: #fff;
+}
+
+#edit:hover {
+    background: transparent;
+    border: 1px solid #6366F1;
+    color: #6366F1;
+}
+
+#close-edit {
+    background: #a8acb1;
+    color: #fff;
+}
+
+#close-edit:hover {
+    text-align: center;
+    background: #d6d6d6;
+    color: #333;
+}
+
+#open-modalEdit {
+    cursor: pointer;
+    font-size: 16px;
+    color: #6366F1;
+    transition: .2s;
+}
+
+#open-modalEdit:hover {
+    opacity: .8;
+}

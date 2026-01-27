@@ -1,0 +1,180 @@
+<script src="../../public/js/carregamento.js"></script>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>QrPoint</title>
+    <link rel="stylesheet" href="../../public/style/admPerfil.css">
+    <link rel="stylesheet" href="../../public/style/menu.css">
+    <link rel="stylesheet" href="../../public/style/carregamento.css">
+</head>
+<link rel="icon" type="image/png" style="font-size: 256px;" sizes="1024x1024" href="../../public/assets/logo.png">
+<body>
+
+    <div id="loading" class="hideLoading">
+        <div class="loading-container">
+            <svg fill="hsl(228, 97%, 42%)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="spinner-svg"><circle cx="4" cy="12" r="0"><animate begin="0;spinner_z0Or.end" attributeName="r" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="0;3" fill="freeze"/><animate begin="spinner_OLMs.end" attributeName="cx" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="4;12" fill="freeze"/><animate begin="spinner_UHR2.end" attributeName="cx" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="12;20" fill="freeze"/><animate id="spinner_lo66" begin="spinner_Aguh.end" attributeName="r" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="3;0" fill="freeze"/><animate id="spinner_z0Or" begin="spinner_lo66.end" attributeName="cx" dur="0.001s" values="20;4" fill="freeze"/></circle><circle cx="4" cy="12" r="3"><animate begin="0;spinner_z0Or.end" attributeName="cx" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="4;12" fill="freeze"/><animate begin="spinner_OLMs.end" attributeName="cx" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="12;20" fill="freeze"/><animate id="spinner_JsnR" begin="spinner_UHR2.end" attributeName="r" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="3;0" fill="freeze"/><animate id="spinner_Aguh" begin="spinner_JsnR.end" attributeName="cx" dur="0.001s" values="20;4" fill="freeze"/><animate begin="spinner_Aguh.end" attributeName="r" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="0;3" fill="freeze"/></circle><circle cx="12" cy="12" r="3"><animate begin="0;spinner_z0Or.end" attributeName="cx" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="12;20" fill="freeze"/><animate id="spinner_hSjk" begin="spinner_OLMs.end" attributeName="r" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="3;0" fill="freeze"/><animate id="spinner_UHR2" begin="spinner_hSjk.end" attributeName="cx" dur="0.001s" values="20;4" fill="freeze"/><animate begin="spinner_UHR2.end" attributeName="r" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="0;3" fill="freeze"/><animate begin="spinner_Aguh.end" attributeName="cx" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="4;12" fill="freeze"/></circle><circle cx="20" cy="12" r="3"><animate id="spinner_4v5M" begin="0;spinner_z0Or.end" attributeName="r" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="3;0" fill="freeze"/><animate id="spinner_OLMs" begin="spinner_4v5M.end" attributeName="cx" dur="0.001s" values="20;4" fill="freeze"/><animate begin="spinner_OLMs.end" attributeName="r" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="0;3" fill="freeze"/><animate begin="spinner_UHR2.end" attributeName="cx" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="4;12" fill="freeze"/><animate begin="spinner_Aguh.end" attributeName="cx" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="12;20" fill="freeze"/></circle></svg>
+            <p class="loading-text">Carregando...</p>
+        </div>
+    </div>
+
+    <div id="carregando" class="hide">
+        <span class="carregando"></span>
+    </div>
+
+    <section id="barra-lateral">
+        <header>
+            <div class="logo">
+                <img src="../../public/assets/logo.png" height="64px" width="64px">
+            </div>
+            <h2>QrPoint</h2>
+        </header>
+
+        <nav id="abas">
+            <ul>
+               <a id="dashboard">
+                    <li class="item-menu">
+                        <i class="bi bi-columns-gap"></i>
+                        <span>Dashboard</span>
+                    </li>
+                </a>
+                  <a id="qrcodes">
+                    <li class="item-menu">
+                        <i class="bi bi-qr-code-scan"></i>
+                        <span>Gerar QrCodes</span>
+                    </li>
+                </a>
+                  <a id="usuarios">
+                    <li class="item-menu">
+                        <i class="bi bi-people"></i>
+                        <span>Usuarios</span>
+                    </li>
+                </a>
+                  <a id="presencas">
+                    <li class="item-menu">
+                        <i class="bi bi-calendar2-week"></i>
+                        <span>Presenças</span>
+                    </li>
+                </a>
+                  <a id="perfil">
+                    <li class="item-menu ativo">
+                        <i class="bi bi-person item-menu ativo"></i>
+                        <span class="item-menu ativo">Perfil</span>
+                    </li>
+                </a>
+            </ul>
+        </nav>
+
+        <footer id="footer">
+            <div class="sessao">
+                <div class="letra-sessao"></div>
+                <div class="user-sessao">
+                    <h4></h4>
+                    <span class="email-sessao"></span>
+                </div>
+            </div>
+
+            <div class="icon-sair">
+                <p id="open-modal" ><i class="bi bi-box-arrow-right"></i></p>
+                <h4>Sair da conta</h4>
+            </div>
+            <div id="fade" class="hide"></div>
+            <div id="modal" class="hide">
+                <h1 id="m-h1">Desejas terminar a sessão?</h1>
+
+                <div class="modal-body">
+                    <button class="sair">Sair</button>
+                    <button id="close-modal"">Cancelar</button>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <main id="container">
+        <div class="desc">
+            <h2>Meu Perfil</h2>
+            <span>Visualize e gerencie as suas informações pessoais</span>
+        </div>
+
+        <nav class="box">
+            <nav class="boxChild">
+                <div class="perfil">
+                    <div class="letra-perfil"></div>
+                    <div class="user-perfil">
+                        <h2></h2>
+                        <span class="email-perfil"></span>
+                    </div>
+
+                    <div class="btn-edit-perfil">
+                        <p id="open-modalEdit"><i class="bi bi-pencil-square"></i></p>
+                    </div>
+
+                    <div id="fade-edit" class="hideE"></div>
+
+                    <div id="modal-edit" class="hideE">
+                        <div class="modal-body">
+                            <h2 id="edit-h1">Editar Perfil</h2>
+
+                            <form class="form" id="form-editar">
+                                <label>
+                                    <i class="bi bi-person-fill"></i>
+                                    <input type="text" id="nome" placeholder="Inserira o novo Nome">
+                                </label>
+
+                                <label>
+                                    <i class="bi bi-person-fill"></i>
+                                    <input type="text" id="sobrenome" placeholder="Inserira o novo Sobrenome">
+                                </label>
+
+                                <label>
+                                    <i class="bi bi-envelope"></i>
+                                    <input type="email" id="email" placeholder="Inserira o novo Email">
+                                </label>
+
+                                <label for="senha">
+                                    <i class="bi bi-lock-fill"></i>
+                                    <div>
+                                        <input name="senha" type="password" id="senhaV" placeholder="Insira a nova senha" />
+                                        <i class="bi bi-eye-fill" id="btn-senhaV" onclick="mostrarSenhaV()"></i>
+                                    </div>
+                                </label>
+                                
+
+                                <label for="ConfirmarSenha" class="ConfirmarSenha">
+                                    <i class="bi bi-lock-fill"></i>
+                                    <div>
+                                        <input name="senha" type="password" id="senhaF" placeholder="Confirme a sua senha" />
+                                        <i class="bi bi-eye-fill" id="btn-senhaF" onclick="mostrarSenhaF()"></i>
+                                    </div>
+                                </label>
+
+                                <div class="actions">
+                                    <button id="close-edit" type="button">Cancelar</button>
+                                    <button id="edit" type="submit">Atualizar</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="detalhe">
+                    <p><b>Usuario: </b><span class="users"></span></p><br>
+                    <p><b>Turno: </b><span class="turno"></span></p>
+                </div>
+            </nav>
+        </nav>
+    </main>
+    
+    <div class="box-mensagem"></div>
+
+    <script src="../../public/js/dadosPerfil.js"></script>
+    <script src="../../public/js/animacao.js"></script>
+    <script src="../../public/js/menu.js"></script>
+    <script src="../../public/js/admLocation.js"></script>
+    <script src="../../public/js/logout.js"></script>
+</body>
+</html> 

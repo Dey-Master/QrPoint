@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Página não encontrada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #6366F1;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            max-width: 800px;
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 20px;
+            text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .error-message {
+            font-size: 32px;
+            margin-bottom: 60px;
+            opacity: 0.95;
+        }
+
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            background: white;
+            color: #6e3bff;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .btn-home:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-home .arrow {
+            margin-left: 12px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<link rel="icon" type="image/png" style="font-size: 256px;" sizes="1024x1024" href="./assets/logo.png">
+<body>
+    <div class="container">
+        <div class="error-code">404</div>
+        <div class="error-message">Página não encontrada</div>
+        <a href="./home.html" class="btn-home">
+            Voltar para a página inicial
+            <span class="arrow">→</span>
+        </a>
+    </div>
+</body>
+</html>

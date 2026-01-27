@@ -1,0 +1,32 @@
+# Node modules
+node_modules/
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment files (do not commit sensitive values)
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Build and cache
+dist/
+build/
+.cache/
+coverage/
+
+# Logs
+npm-debug.log*
+*.log
+
+# Misc
+*.tgz

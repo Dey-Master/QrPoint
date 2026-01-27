@@ -1,0 +1,87 @@
+/* Estilo para o Carregamento de abas*/
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, transparent 0%, transparent 280px, #f4f4f4 280px, #f4f4f4 100%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+#loading.hideLoading {
+    display: none;
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 490px;
+    gap: 20px;
+}
+
+.spinner-svg {
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+}
+
+.loading-text {
+    font-size: 16px;
+    color: #6366F1;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Estilo para o carregamento de logout */
+#carregando {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+#carregando.hide {
+    display: none;
+}
+
+span.carregando {
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 80px;
+    border: 12px solid #6366F1;
+    border-left: 12px solid transparent;
+    border-radius: 50%;
+    animation: lodiang 1s linear infinite;
+    transition: .2s;
+}
+
+@keyframes lodiang {
+    0% {
+         transform: rotate(0deg); 
+    }
+    100% {
+         transform: rotate(360deg); 
+    }
+}

@@ -1,0 +1,298 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    transition: .3s;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+}
+#barra-lateral {
+    height: 100%;
+    width: 280px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 50;
+}
+header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 0px;
+    top: 10px;
+    border: 1px solid white;
+    padding: 10px 0px 0px 0px;
+    position: static;
+}
+header h2 {
+    color: #6366F1;
+}
+
+ul {
+    padding: 15px 10px 347px 0px;
+    position: static;
+    margin: 5px 0px;
+    border: 1px solid white;
+}
+a{
+    text-decoration: none;     
+}
+li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0px 0px 1px 10px;
+    column-gap: 10px;
+    list-style-type: none;
+    padding: 12px 10px 10px 25px;
+    border-radius: 6px;
+}
+li:hover {
+    background-color: #f4f4f4;
+}
+
+ul li.ativo {
+    background-color: #f4f4f4;
+}
+
+ul li span {
+    font-size: 16px;
+    color: #848485;
+    transition: .3s;
+}
+span.ativo {
+    color: #6366F1;
+}
+i {
+    font-size: 18px;
+    color: #848485;
+}
+i.ativo {
+    color: #6366F1;
+}
+
+#footer {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding: 10px 5px;
+    gap: 10px;
+    border: 1px solid #f4f4f4;
+    width: 100%;
+    position: static;
+}
+.sessao {
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    background-color: white;
+    padding: 10px;
+    column-gap: 10px;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.letra-sessao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    padding: 1px;
+    height: 42px;
+    width: 42px;
+    background-color: #f4f4f4;
+}
+
+.email-sessao {
+    width: 160px;         
+    white-space: nowrap;   
+    overflow: hidden;   
+    text-overflow: ellipsis;
+}
+
+.user-sessao {
+    width: 200px;         
+    white-space: nowrap;   
+    overflow: hidden;   
+    text-overflow: ellipsis;
+}
+
+.icon-sair {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color: #EF4444;
+    position: relative;
+    left: 24px;
+}
+.icon-sair .bi-box-arrow-right{
+    font-size: 25px;
+    color: #EF4444;
+}
+
+#open-modal {
+    cursor: pointer;
+    font-size: 20px;
+    transition: .2s;
+}
+#open-modal:hover {
+    color: white;
+}
+
+#fade, #modal {
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+#fade {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#modal{
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    border-radius: 6px;
+    padding: 20px;
+    height: auto;
+    width: 400px;
+    transform: translate(-50%, -50%);
+    background-color: #f4f4f4;
+    border: 1px solid rgb(221, 213, 213);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#modal.hide,
+#fade.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal.hide{
+    top: 0;
+}
+#m-h1 {
+    font-size: 20px;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    gap: 25px;
+}
+.modal-body button {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+.sair {
+    background-color: #EF4444;
+    transition: 0.5s;
+    
+}
+.sair:hover {
+    opacity: 1;
+    background-color: #f08484;
+}
+
+#close-modal {
+    background-color: #a8acb1;
+    transition: 0.5s;
+    color: white;
+    font-size: 16px;
+}
+#close-modal:hover {
+    opacity: 1;
+    background-color:  #d6d6d6;
+}
+
+
+.box-mensagem {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;          
+    pointer-events: none; 
+}
+.mensagem {
+    background-color: #fff;
+    color: #000;
+    padding: 14px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;          
+    min-width: auto;
+    max-width: auto;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.4s ease;
+    pointer-events: auto; 
+    overflow: hidden;
+    position: relative;
+}
+.mensagem.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+.mensagem::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.1s linear;
+}
+
+.mensagem.show.sucesso::after {
+    background-color: #22c55e;
+    animation: reduzirBarra 2.5s linear forwards;
+}
+
+.mensagem.show.erro::after {
+    background-color: #ef4444;
+    animation: reduzirBarra 2.5s linear forwards;
+}
+
+@keyframes reduzirBarra {
+    from { transform: scaleX(1); }
+    to   { transform: scaleX(0); }
+}
+
+.mensagem.sucesso i {
+    color: #22c55e;
+    font-size: 20px;
+}
+.mensagem.erro i {
+    color: #ef4444;
+    font-size: 20px;
+}

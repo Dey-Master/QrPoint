@@ -1,0 +1,103 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    transition: .3s;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f3f4f6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+.resultado {
+    text-align: center;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.resultado.sucesso {
+    background: #22c55e;
+    color: #fff;
+}
+
+.resultado.atrasado {
+    background: #f59e0b;
+    color: #fff;
+}
+
+.resultado.saida {
+    background: #3b82f6;
+    color: #fff;
+}
+
+.resultado.erro {
+    background: #ef4444;
+    color: #fff;
+}
+
+.icone {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.linha {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.linha:last-child {
+    border-bottom: none;
+}
+
+#status.pontual {
+    color: #22c55e;
+}
+
+#status.atrasado {
+    background: #f1f3f5;
+    color: #495057; 
+}
+#status.saida {
+    color: #3b82f6;
+}
+.turno.manha {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.turno.tarde {
+    background: #ffe5d0;
+    color: #b45309;
+}
+.btn {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    padding: 12px;
+    background: #6366F1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+}

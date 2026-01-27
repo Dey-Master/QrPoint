@@ -1,0 +1,498 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    transition: .3s;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    height: 100vh;
+    background-color: #E5E7EB;
+}
+
+.btn-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #6366F1;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.btn-home:hover {
+    background-color: #4f46e5;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    
+}
+.content{
+    height: 75%;
+    width: 960px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    background-color: #f4f4f4;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+.content::before {
+    content: "";
+    position: absolute;
+    background-color: #6366F1;
+    width: 40%;
+    height: 100%;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    right: 0%;
+}
+.fist-content {
+    display: flex;
+}
+
+.title {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.title-Welcome {
+    color: #f4f4f4;
+}
+.title-Create {
+    color: #6366F1;
+    position: relative;
+    right: 4%;
+}
+.description {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    color: #f4f4f4;
+    margin-bottom: 5px;
+}
+.btn{
+    border-radius: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 40px;
+    color: #f4f4f4;
+    width: 200px;
+    align-self: center;
+}
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid #f4f4f4;
+}
+.btn-primary:hover{
+    background-color: #f4f4f4;
+    color: #6366F1;
+}
+.btn-second {
+    background-color: #6366F1;
+    border: 1px solid #6366F1;
+    position: relative;
+    right: 4%;
+}
+.btn-second:hover{
+    background-color: #f4f4f4;
+    color: #6366F1;
+}
+.fist-column {
+    text-align: center;
+    width: 40%;
+    z-index: 10;
+}
+.second-column {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px 0px 0px;
+}
+.form input {
+    height: 45px;
+    font-size: 17px;
+    width: 320px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    padding: 0px 40px;
+    border-radius: 5px;
+    outline: none;
+}
+
+label {
+    position: relative;
+}
+label .bi-envelope{
+    font-size: 20px;
+    position: absolute;
+    left: 4%;
+    top: 17px;
+    color: #7f8c8d;
+}
+label .bi-lock-fill{
+    font-size: 20px;
+    position: absolute;
+    left: 4%;
+    top: 17px;
+    color: #7f8c8d;
+}
+label .bi-person-fill{
+    font-size: 20px;
+    position: absolute;
+    left: 4%;
+    top: 17px;
+    color: #7f8c8d;
+}
+
+div .bi-eye-fill{
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+    right: 12%;
+    top: 5px;
+    color: #6366F1;
+}
+div .bi-eye-slash-fill {
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+    right: 12%;
+    top: 5px;
+    color: #6366F1;
+}
+
+.form select {
+    height: 40px;
+    font-size: 15px;
+    width: 320px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    padding: 0px 10px;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 15px
+}
+.second-content {
+    position: absolute;
+    display: flex;
+}
+.second-content .fist-column {
+    order: 2;
+}
+.second-content .second-column {
+    order: 1;
+    z-index: 15;
+}
+.a-link {
+    font-size: 14px;
+    color: #6366F1;
+    text-decoration: none;
+    align-self: flex-start;
+    margin: 15px 10px;
+}
+.form label {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 5px 10px 0px 5px;
+    color: #6366F1;
+}
+.form input:focus {
+    border-color: #6366F1;
+    box-shadow: 0 0 5px #6366F1;
+    outline: none;
+}
+.form select:focus {
+    border-color: #6366F1;
+    box-shadow: 0 0 5px #6366F1;
+    outline: none;
+}
+.error {
+    color: #ef4444;
+    font-size: 14px;
+    position: relative;
+    left: 12px;
+    margin-top: 1px;
+    max-width: 200px;
+}
+
+
+.sign-up-js .second-content .fist-column,
+.sign-up-js .second-content .second-column {
+    position: relative;
+    animation: deslocamentoDireito 1s forwards;
+    z-index: -1;
+}
+.sign-up-js .fist-content .fist-column {
+    z-index: 16;
+
+}
+.sign-up-js .fist-content .second-column {
+    z-index: 15;
+}
+.sign-up-js .content::before {
+    right: 60%;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    animation: slidein 1s forwards;
+    z-index: 15;
+}
+
+.sign-in-js .fist-content .fist-column,
+.sign-in-js .fist-content .second-column {
+    position: relative;
+    animation: deslocamentoEsquerdo 1s forwards;
+    z-index: -1;
+}
+.sign-in-js .second-content .fist-column{
+    z-index: 15;
+}
+.sign-in-js .second-content .second-column {
+    z-index: 10;
+}
+.sign-in-js .content::before {
+    z-index: 15;
+    animation: slideup 1s forwards;
+}
+
+@keyframes slidein {
+   from {
+        right: 0%;
+        width: 40%;
+    }
+    50% {
+        right: 25%;
+        width: 60%;
+    }
+    to {
+        right: 60%;
+        width: 40%;
+    }
+}
+
+@keyframes slideup {
+   from {
+        right: 60%;
+        width: 40%; 
+    }
+    50% {
+        right: 25%;
+        width: 60%;
+    }
+    to {
+        right: 0%;
+        width: 40%;
+    }
+}
+
+@keyframes deslocamentoDireito {
+   from {
+        right: 0;
+        opacity: 1;
+        z-index: 12;
+    }
+    to {
+        right: -110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes deslocamentoEsquerdo {
+   from {
+        left: 0;
+        opacity: 1;
+    }
+    to {
+        left: -110px;
+        opacity: 0;
+}
+}
+
+.box-mensagem {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;          
+    pointer-events: none; 
+}
+.mensagem {
+    background-color: #fff;
+    color: #000;
+    padding: 14px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;          
+    min-width: auto;
+    max-width: auto;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.4s ease;
+    pointer-events: auto; 
+    overflow: hidden;
+    position: relative;
+}
+.mensagem.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+.mensagem::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.1s linear;
+}
+
+.mensagem.show.sucesso::after {
+    background-color: #22c55e;
+    animation: reduzirBarra 2.5s linear forwards;
+}
+
+.mensagem.show.erro::after {
+    background-color: #ef4444;
+    animation: reduzirBarra 2.5s linear forwards;
+}
+
+@keyframes reduzirBarra {
+    from { transform: scaleX(1); }
+    to   { transform: scaleX(0); }
+}
+
+.mensagem.sucesso i {
+    color: #22c55e;
+    font-size: 20px;
+}
+.mensagem.erro i {
+    color: #ef4444;
+    font-size: 20px;
+}
+
+/* Responsividade para Celulares (480px) */
+@media (max-width: 480px) {
+    .content {
+        width: 95vw;
+        height: 90vh;
+    }
+
+    .btn-home {
+        top: 8px;
+        left: 8px;
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+
+    .title {
+        font-size: 16px;
+        margin: 10px 0 8px 0;
+    }
+
+    .description {
+        font-size: 10px;
+        line-height: 14px;
+        margin-bottom: 6px;
+    }
+
+    .btn {
+        width: 110px;
+        padding: 7px 14px;
+        font-size: 8px;
+        margin: 6px 0;
+    }
+
+    .form {
+        margin: 8px 5px 0 0;
+    }
+
+    .form input {
+        width: 180px;
+        height: 32px;
+        font-size: 12px;
+        margin: 3px;
+        padding: 0 32px;
+    }
+
+    .form select {
+        width: 180px;
+        height: 32px;
+        font-size: 12px;
+        margin: 3px;
+        padding: 0 12px;
+        margin-bottom: 10px;
+    }
+
+    label .bi-envelope,
+    label .bi-lock-fill,
+    label .bi-person-fill {
+        font-size: 14px;
+        top: 10px;
+    }
+
+    div .bi-eye-fill,
+    div .bi-eye-slash-fill {
+        font-size: 14px;
+        right: 13%;
+        top: 3px;
+    }
+
+    .form label {
+        font-size: 12px;
+        margin: 3px 5px 0 3px;
+    }
+
+    .a-link {
+        font-size: 11px;
+        margin: 8px 5px;
+    }
+
+    .error {
+        font-size: 11px;
+        left: 8px;
+    }
+
+    .mensagem {
+        max-width: calc(100vw - 30px);
+        font-size: 11px;
+        padding: 10px 12px;
+    }
+
+    .mensagem i {
+        font-size: 14px;
+    }
+
+    .box-mensagem {
+        top: 50px;
+        right: 10px;
+        gap: 5px;
+    }
+}
