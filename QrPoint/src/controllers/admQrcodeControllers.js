@@ -35,7 +35,7 @@ const criar = async (req, res) => {
         
         
         const token = crypto.randomUUID();
-        const urlBase =/*'http://localhost:8081/'*/ 'http://192.168.1.42:8081';
+        const urlBase ='http://localhost:8081/' /*'http://192.168.1.42:8081'*/;
         const urlQr = `${urlBase}/presenca/${token}`;
         const nomeArquivo = `qr_${token}.png`;
         const pastaQr = path.join(__dirname, '../uploads');
