@@ -4,15 +4,15 @@ QRPresence é uma plataforma web desenvolvida com HTML, CSS, JavaScript e Node.j
 
 ## Principais Funcionalidades
 
-- **Gestão de usuários:** Usuário Comum e Administrador (ADM)  
-- **Registro e autenticação via email** com aprovação pelo ADM  
+- **Gestão de usuários:** Usuário Comum, Moderadores e o Administrador (ADM)  
+- **Registro e autenticação via email** com aprovação pelo ADM  ou Moderadores
 - **Controle de presença por QR Code**: registro automático de entrada e saída  
 - **Cálculo de atraso e status de presença**: pontual, atrasado ou falta  
 - **Visualização de histórico** diário, semanal ou mensal  
-- **Marcação manual de faltas pelo ADM**  
-- **Painel administrativo completo:** criação de QR Codes, aprovação de usuários e geração de relatórios
+- **Marcação de faltas automáticas pelo sistema**  
+- **Painel administrativo completo:** criação de QR Codes, aprovação de usuários e Visualização de presenças
 - **Notificações e confirmações** no front-end após scan  
-- **Segurança:** tokens únicos para QR Codes e autenticação com sessão ou JWT  
+- **Segurança:** tokens únicos para QR Codes e autenticação com sessão
 
 ## Tecnologias Utilizadas
 
