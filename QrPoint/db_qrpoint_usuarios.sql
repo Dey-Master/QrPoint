@@ -45,7 +45,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Admin',NULL,'adminmaster@gmail.com','$2b$10$W/XMQGEKlz6hxkHsopFS0OUFJyxq52Nc1ti7tjD6Q5ZCYo0pmLzVq','manha','admin','aprovado','2026-01-11 03:35:15','2026-01-27 09:26:50','YUjwlrJXUQE7sAxDH2qkXlbP01Rmc4ap'),(2,'Joel','Carlos','joelcarlos@gmail.com','$2b$10$HmGyKR9dHBPSMyGBgoC7pukvoLPcxa/qU1Es0rTpdfH93i2MeLcdW','tarde','moderador','aprovado','2026-01-11 03:36:38','2026-01-12 16:15:24','N1hsHAuCCxhx_IrLwDmzxMyb2apa3O1q'),(4,'Daniel','Rico','danielrico@gmail.com','$2b$10$osCHWyiTrFdcxp6xwOkb7OnhLblzH0sYpIwA/.lqR1.a0fi3cKq1C','manha','user','aprovado','2026-01-11 03:39:59','2026-01-17 13:25:38','wpvLKhJWT270mo0_bp2iUB0Cm237WAsg'),(5,'Nestor','Silva','nestorsilva@gmail.com','$2b$10$qvQ7wcboPu4qu3npDyng1OCsqzKu6.Y2Iqzu/wT0gLe2L1A48AYhy','tarde','user','aprovado','2026-01-12 16:51:35','2026-01-27 09:31:37','pBdu3VIvssWrJd7ERyjgcB1t0c4Q5UVa'),(7,'Beta ','Lito','betalito@gmail.com','$2b$10$ufo26P3IQGpqVyf8l69O9.6E7XR1j20ou5qKdXgl1BAR/.aoR72c.','manha','user','aprovado','2026-01-19 21:39:35','2026-01-27 08:22:58','Rguj0ZOjP05Husu69rj_oz8I_QLCA2pv');
+INSERT INTO `usuarios` VALUES (1,'Admin',NULL,'adminmaster@gmail.com','$2b$10$W/XMQGEKlz6hxkHsopFS0OUFJyxq52Nc1ti7tjD6Q5ZCYo0pmLzVq','manha','admin','aprovado','2026-01-11 03:35:15','2026-01-27 09:26:50','YUjwlrJXUQE7sAxDH2qkXlbP01Rmc4ap'));
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
