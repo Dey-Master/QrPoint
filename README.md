@@ -1,6 +1,6 @@
 # # QRPOINT – Sistema de Presença com QR Code
 
-QRPresence é uma plataforma web desenvolvida com HTML, CSS, JavaScript e Node.js, destinada a simplificar o registro de presença em instituições como escolas, empresas ou qualquer organização que precise controlar entradas e saídas. O sistema centraliza o registro de presença, cálculo de atrasos e faltas, histórico de usuários e relatórios administrativos, garantindo maior eficiência, precisão e transparência.
+QrPoint é uma plataforma web desenvolvida com HTML, CSS, JavaScript e Node.js, destinada a simplificar o registro de presença em instituições como escolas, empresas ou qualquer organização que precise controlar entradas e saídas. O sistema centraliza o registro de presença, cálculo de atrasos e faltas, histórico de usuários e relatórios administrativos, garantindo maior eficiência, precisão e transparência.
 
 ## Principais Funcionalidades
 
